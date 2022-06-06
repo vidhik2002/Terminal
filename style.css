@@ -2,6 +2,7 @@
 
 .cmd, .cmd span:not(.fas):not(.far):not(.fa){
     --size: 4;
+    color: aqua;
 }
 
 .terminal,  .terminal-output>:not(.raw) span:not(.fas):not(.far):not(.fa) {
@@ -9,3 +10,13 @@
     --size: 4;
     color: rgb(181, 96, 231)
 }
+
+.cmd, .cmd div, .terminal, .terminal-output>:not(.raw) a, .terminal-output>:not(.raw) div, .terminal-output>:not(.raw) span[data-text]:not(.token):not(.inverted):not(.terminal-inverted):not(.cmd-inverted):not(.terminal-error):not(.emoji), .terminal.external [data-text] {
+    background-color: var(--background,#000);
+    color: var(--color,rgb(191, 232, 244));
+}
+
+.cmd span[data-text]:not(.cmd-inverted):not(.token):not(.emoji){
+    color: aqua;
+}
+
