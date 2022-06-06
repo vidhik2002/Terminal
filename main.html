@@ -28,7 +28,12 @@ $('body').terminal({
     help: function() {
         this.echo('Commands\n 1\. hello {your_name}\n 2. portfolio\n 3. medium')
     },
-
+    portfolio: function() {
+        window.open('https://www.vidhi-khaitan.live/', '_newtab');        
+    },
+    medium: function() {
+        window.open('https://medium.com/@vidhik2002', '_newtab');        
+    },
 }, {
     checkArity: false,
     completion: true,
