@@ -10,11 +10,23 @@
 </head>
 <body>
 <script>
+$(function() {
+    $('#terminal').terminal({}, {
+        keymap: {
+            'CTRL+P': function(e, original) {
+                 this.echo('my shortcut');
+            }
+       }
+    });
+})
 $('body').terminal({
     hello: function(what){
+        if(what !== undefined){
         this.echo('Hello, ' + what +
                   '. Welcome to this terminal.');
-    },
+    }else{
+        this.echo('Hello, Welcome to this terminal.');
+    }},
     cat: function(width, height) {
         const img = $('<img src="https://placekitten.com/' +
                       width + '/' + height + '">');
@@ -37,7 +49,7 @@ $('body').terminal({
 }, {
     checkArity: false,
     completion: true,
-    greetings: 'Hello, I\'m Vidhi! Hope you are having a great day!!\n'
+    greetings: 'Hello, I\'m Vidhi! Type help or ctrl+P\n'
 });
 </script>
 </body>
