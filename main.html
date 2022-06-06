@@ -38,18 +38,29 @@ $('body').terminal({
             .then(html => html.match(/<title>([^>]+)<\/title>/)[1]);
     },
     help: function() {
-        this.echo('Commands\n 1\. hello {your_name}\n 2. portfolio\n 3. medium')
+        this.echo('Commands\n 1\. hello {your_name}\n 2. portfolio\n 3. resume\n 4.socials {number_choice}\n\t 1 GitHub \n\t 2 LinkedIn \n\t 3 Medium')
     },
     portfolio: function() {
         window.open('https://www.vidhi-khaitan.live/', '_newtab');        
     },
-    medium: function() {
+    resume: function() {
         window.open('https://medium.com/@vidhik2002', '_newtab');        
     },
+    socials: function(no){
+        if(no==1){
+            window.open('https://github.com/vidhik2002', '_newtab'); 
+        }else if(no==2){
+            window.open('https://www.linkedin.com/in/vidhi-khaitan/', '_newtab');
+        }else if(no==3){
+            window.open('https://medium.com/@vidhik2002', '_newtab');
+        }else{
+            this.echo('add the correct number as a parameter, eg- socials 1')
+        }
+    }
 }, {
     checkArity: false,
     completion: true,
-    greetings: 'Hello, I\'m Vidhi! Type help or ctrl+P\n'
+    greetings: 'Hello, I\'m Vidhi! Type help.\n'
 });
 </script>
 </body>
