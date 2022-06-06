@@ -24,7 +24,11 @@ $('body').terminal({
         return fetch('https://terminal.jcubic.pl')
             .then(r => r.text())
             .then(html => html.match(/<title>([^>]+)<\/title>/)[1]);
-    }
+    },
+    help: function() {
+        this.echo('Commands\n 1\. hello {your_name}\n 2. portfolio\n 3. medium')
+    },
+
 }, {
     checkArity: false,
     completion: true,

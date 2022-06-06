@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
-:root {
-    --size: 1.6;
-    font-family: 'Sigmar One', cursive;
+
+.cmd, .cmd span:not(.fas):not(.far):not(.fa){
+    --size: 4;
 }
-.cmd, .cmd span:not(.fas):not(.far):not(.fa), .terminal, .terminal-output>:not(.raw), .terminal-output>:not(.raw) a, .terminal-output>:not(.raw) span:not(.fas):not(.far):not(.fa) {
+
+.terminal,  .terminal-output>:not(.raw) span:not(.fas):not(.far):not(.fa) {
     font-family: 'Sigmar One', cursive;
     --size: 4;
+    color: rgb(181, 96, 231)
 }
