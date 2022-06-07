@@ -10,6 +10,10 @@
 </head>
 <body>
 <script>
+// var term = $('body').terminal();
+// term.read('Enter your {{ id-card }}: ').then((id) => {
+//     term.echo(`Your {{ id-card | green }} is [[b;#fff;]${id}]`);
+// });
 $(function() {
     $('#terminal').terminal({}, {
         keymap: {
@@ -37,8 +41,13 @@ $('body').terminal({
             .then(r => r.text())
             .then(html => html.match(/<title>([^>]+)<\/title>/)[1]);
     },
-    help: function() {
+    
+    cat: function(what) {
+        if(what=="README.md"||what=="readme.md"||what=="Readme.md"){
         this.echo('Commands\n 1\. hello {your_name}\n 2. portfolio\n 3. resume\n 4.socials {number_choice}\n\t 1 GitHub \n\t 2 LinkedIn \n\t 3 Medium')
+        }else{
+            this.echo("Command not found!")
+        }
     },
     portfolio: function() {
         window.open('https://www.vidhi-khaitan.live/', '_newtab');        
