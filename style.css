@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&family=Skranji&display=swap');
 
 .terminal,  .terminal-output>:not(.raw) span:not(.fas):not(.far):not(.fa) {
+    /* font-family: 'Sigmar One', cursive; */
     font-family: 'Sigmar One', cursive;
+    /* font-family: 'Sigmar One', cursive; */
+    font-family: 'Skranji', cursive;
     --size: 4;
     color: rgb(181, 96, 231)
 }
