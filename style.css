@@ -1,10 +1,8 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&family=Skranji&display=swap');
 
-.terminal,  .terminal-output>:not(.raw) span:not(.fas):not(.far):not(.fa) {
-    /* font-family: 'Sigmar One', cursive; */
+/* .terminal,  .terminal-output>:not(.raw) span:not(.fas):not(.far):not(.fa) { 
     font-family: 'Sigmar One', cursive;
-    /* font-family: 'Sigmar One', cursive; */
     font-family: 'Skranji', cursive;
     --size: 4;
     color: rgb(181, 96, 231)
@@ -23,19 +21,19 @@
 .cmd, .cmd span:not(.fas):not(.far):not(.fa), .cmd div{
     --size: 4;
    
-}
+} */
 
- /* .terminal, .terminal-output>:not(.raw) span:not(.fas):not(.far):not(.fa) {
-    font-family: 'Sigmar One', cursive;
+ .terminal, .terminal-output>:not(.raw) span:not(.fas):not(.far):not(.fa) {
+    font-family: 'Skranji', cursive;
     --size: 4;
-    color: rgb(181, 96, 231); */
-    /* color: var(--color,rgb(105, 212, 114));
+    color: rgb(181, 96, 231); 
+    color: var(--color,rgb(105, 212, 114));
     
-}
+} 
 .cmd span[data-text]:not(.cmd-inverted):not(.token):not(.emoji){
     color: aqua;
 }
 
 .cmd, .cmd div, .terminal-output>:not(.raw) div, .terminal-output>:not(.raw) span[data-text]:not(.token):not(.inverted):not(.terminal-inverted):not(.cmd-inverted):not(.terminal-error):not(.emoji), .terminal.external [data-text]{
     color: white
-} */
+}

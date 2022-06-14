@@ -14,15 +14,15 @@
 // term.read('Enter your {{ id-card }}: ').then((id) => {
 //     term.echo(`Your {{ id-card | green }} is [[b;#fff;]${id}]`);
 // });
-$(function() {
-    $('#terminal').terminal({}, {
-        keymap: {
-            'CTRL+P': function(e, original) {
-                 this.echo('my shortcut');
-            }
-       }
-    });
-})
+// $(function() {
+//     $('#terminal').terminal({}, {
+//         keymap: {
+//             'CTRL+P': function(e, original) {
+//                  this.echo('my shortcut');
+//             }
+//        }
+//     });
+// })
 $('body').terminal({
     hello: function(what){
         if(what !== undefined){
@@ -31,20 +31,20 @@ $('body').terminal({
     }else{
         this.echo('Hello, Welcome to this terminal.');
     }},
-    // cat: function(width, height) {
-    //     const img = $('<img src="https://placekitten.com/' +
-    //                   width + '/' + height + '">');
-    //     this.echo(img);
-    // },
-    // title: function() {
-    //     return fetch('https://terminal.jcubic.pl')
-    //         .then(r => r.text())
-    //         .then(html => html.match(/<title>([^>]+)<\/title>/)[1]);
-    // },
+    cat: function(width, height) {
+        const img = $('<img src="https://placekitten.com/' +
+                      width + '/' + height + '">');
+        this.echo(img);
+    },
+    title: function() {
+        return fetch('https://terminal.jcubic.pl')
+            .then(r => r.text())
+            .then(html => html.match(/<title>([^>]+)<\/title>/)[1]);
+    },
     
     cat: function(what) {
         if(what=="README.md"||what=="readme.md"||what=="Readme.md"){
-        this.echo('Commands\n 1\. hello {your_name}\n 2. portfolio\n 3. resume\n 4.socials {number_choice}\n\t 1 GitHub \n\t 2 LinkedIn \n\t 3 Medium \n 4\. certification')
+        this.echo('Commands\n 1\. hello {your_name}\n 2. portfolio\n 3. resume\n 4.socials {number_choice}\n\t 1 GitHub \n\t 2 LinkedIn \n\t 3 Medium \n 4. certification')
         }else{
             this.echo("Command not found!")
         }
@@ -74,6 +74,7 @@ $('body').terminal({
     completion: true,
     greetings: 'Hello, I\'m Vidhi! Type cat README.md\n'
 });
+
 </script>
 </body>
 </html>
